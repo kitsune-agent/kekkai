@@ -1,5 +1,5 @@
 {
-  "name": "kekkai",
+  "name": "@kitsune-agent/kekkai",
   "version": "1.0.0",
   "description": "Memory integrity scanner for AI agents — deterministic, AI-free defense against OWASP ASI06",
   "type": "module",
@@ -18,7 +18,8 @@
     "build": "tsup",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
     "ai",
@@ -28,10 +29,27 @@
     "scanner",
     "owasp",
     "asi06",
-    "agent"
+    "agent",
+    "memory-poisoning",
+    "prompt-injection",
+    "credential-leak",
+    "sarif",
+    "deterministic",
+    "ai-free"
   ],
-  "author": "",
+  "author": "kitsune-agent",
   "license": "MIT",
+  "homepage": "https://github.com/kitsune-agent/kekkai#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kitsune-agent/kekkai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kitsune-agent/kekkai/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
